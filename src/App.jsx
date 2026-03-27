@@ -1,5 +1,6 @@
 import api from "../src/apí";
 import { useEffect, useState } from "react";
+import { FaEye } from "react-icons/fa";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -55,6 +56,10 @@ export default function Login() {
         alignItems: "center",
       }}
     >
+      <br />
+      <br />
+      <br />
+      <br />
       <div
         style={{
           alignItems: "center",
@@ -66,69 +71,62 @@ export default function Login() {
           height: "auto",
         }}
       >
-        <p>Página de LOGIN</p>
-        <form onSubmit={Login}>
-          <input
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+        <p>Mudar visibilidade da senha</p>
+        <br />
 
-            // onChangeText={(e) => setEmail(e.target.value)}
-          />
-          {/* <button onClick={() => setHideSenha("password")}>
-            MUDAR TEXTO SENHA
-          </button> */}
-
-          <button onClick={() => setHideSenha(!hideSenha)}>
-            MUDAR TEXTO PARA LETRAS
-          </button>
-
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            background: "white",
+            color: "black",
+            flexDirection: "row",
+          }}
+        >
           <input
             type={hideSenha === true ? "text" : "password"}
             placeholder="Senha"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            // onChangeText={(e) => setPassword(e.target.value)}
-            // style={{
-            //   display: "flex",
-            //   width: "80%",
-            //   height: 8,
-            //   backgroundColor: "yellow",
-            //   color: "black",
-            // }}
-          />
-          {/* <TextInput
-          style={styles.input}
-          placeholder="Nome Completo..."
-          value={name}
-          onChangeText={setName}
-        /> */}
-
-          <div
             style={{
               display: "flex",
-              alignItems: "center",
-              background: "white",
-              color: "black",
+              height: "35px",
+              width: "300px",
+              fontSize: "22px",
+              paddingLeft: "10px",
             }}
-          >
-            <button type="submit">
-              {/* <Link */}
-              {/* // href="/home" */}
-              {/* // style={{ */}
-              {/* //   width: 100,
+            onChange={(e) => setPassword(e.target.value)}
+          />
+
+          <button onClick={() => setHideSenha(!hideSenha)}>
+            <FaEye size={30} />
+          </button>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            background: "white",
+            color: "black",
+          }}
+        >
+          {/* <button type="submit">
+            {/* <Link */}
+          {/* // href="/home" */}
+          {/* // style={{ */}
+          {/* //   width: 100,
                 //   fontSize: 24,
                 //   backgroundColor: "lightgray",
                 //   cursor: "pointer",
                 //   marginTop: 20,
                 // }}
               > */}
-              CLIQUE PARA LOGAR
-              {/* </Link> */}
-            </button>
-          </div>
-        </form>
-
+          {/* CLIQUE PARA LOGAR */}
+          {/* </Link> 
+          </button> */}
+        </div>
+        {/* </form> */}
+        {/* 
         <div>
           {users.map((item) => (
             <div key={item.id}>
@@ -136,16 +134,7 @@ export default function Login() {
               <p style={{ color: "black" }}>{item.email}</p>
             </div>
           ))}
-        </div>
-
-        {/* <View style={{ display: "flex", alignItems: "center" }}>
-            <Link
-              href="/home"
-              style={{width:100, fontSize: 24,backgroundColor: "lightgray", cursor: "pointer", marginTop: 20 }}
-            >
-              HOME
-            </Link>
-          </View> */}
+        </div> */}
       </div>
     </div>
     // </View>
