@@ -1,5 +1,6 @@
 import api from "../src/apí";
 import { useEffect, useState } from "react";
+import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 
 export default function Login() {
@@ -98,7 +99,8 @@ export default function Login() {
           />
 
           <button onClick={() => setHideSenha(!hideSenha)}>
-            <FaEye size={30} />
+            {/* <FaEye size={30} /> */}
+            {hideSenha ? <FaEye size={30} /> : <FaEyeSlash size={30} />}
           </button>
         </div>
 
